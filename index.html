@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab-Switcher</title>
+
+    <style>
+        .container {
+            height: 500px;
+            width: 700px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 20px;
+        }
+
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Geneva, Tahoma, sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.5rem;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            box-sizing: border-box;
+            height: 100%;
+        }
+
+        .tab-content {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            height: 100%;
+        }
+
+        img {
+            height: 200px;
+            width: 200px;
+            object-fit: contain;
+            object-position: center;
+            margin: 0 auto 20px auto;
+            display: block;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+            font-weight: bold;
+            width: 140px;
+        }
+
+        button:hover {
+            background-color: #f0f0f0;
+        }
+
+        button:active {
+            background-color: #e0e0e0;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content:first-child {
+            display: block;
+        }
+
+        button {
+            border: none;
+            border-bottom: 2px solid transparent;
+        }
+
+        .tab-btn:first-child button {
+            border-bottom-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab-btn" data-tab="1">
+                <button type="button">C++</button>
+            </div>
+            <div class="tab-btn" data-tab="2">
+                <button type="button">JavaScript</button>
+            </div>
+            <div class="tab-btn" data-tab="3">
+                <button type="button">Java</button>
+            </div>
+            <div class="tab-btn" data-tab="4">
+                <button type="button">Python</button>
+            </div>
+            <div class="tab-btn" data-tab="5">
+                <button type="button">TypeScript</button>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="tab-content" data-tab="1">
+                <img src="./cbe401fa-ce4b-4644-985f-e2bb42b909ef_28_WhyC++.avif">
+                <p>
+                    C++ is a general-purpose programming language created by Bjarne Stroustrup at Bell Labs in Murray
+                    Hill, New Jersey, starting in 1979. It is an extension of the C programming language or "C with
+                    Classes". C++ is widely used for system/software development and game development due to its
+                    performance and efficiency.
+                </p>
+            </div>
+            <div class="tab-content" data-tab="2">
+                <img src="./images.png">
+                <p>
+                    JavaScript, often abbreviated as JS, is a high-level, dynamic, untyped, and interpreted programming
+                    language. It has become a standard for creating interactive web pages and is an essential part of
+                    web applications. JavaScript is versatile and can be used for both client-side and server-side
+                    development.
+                </p>
+            </div>
+            <div class="tab-content" data-tab="3">
+                <img src="./JAVA-768x512.webp">
+                <p>
+                    Java is a high-level, class-based, object-oriented programming language that is designed to have as
+                    few implementation dependencies as possible. It is a general-purpose programming language that is
+                    intended to let application developers write once, run anywhere (WORA), meaning that code that runs
+                    on one platform does not need to be recompiled to run on another.
+                </p>
+            </div>
+            <div class="tab-content" data-tab="4">
+                <img src="./python-programming-language.webp">
+                <p>
+                    Python is an interpreted, high-level, general-purpose programming language. Its design philosophy
+                    emphasizes code readability with the use of significant indentation. Python is dynamically typed and
+                    garbage-collected. It supports multiple programming paradigms, including structured (particularly
+                    procedural), object-oriented, and functional programming.
+                </p>
+            </div>
+            <div class="tab-content" data-tab="5">
+                <img src="./Typescript_logo_2020.svg.png">
+                <p>
+                    TypeScript is a strict syntactical superset of JavaScript that adds optional static typing to the
+                    language. Developed and maintained by Microsoft, it was designed for the development of large
+                    applications and transpiles to JavaScript. TypeScript is often used in conjunction with modern
+                    frameworks like Angular and React.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
